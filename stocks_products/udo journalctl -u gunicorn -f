@@ -1,0 +1,20 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon for Django CRUD project
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Mon 2025-10-06 22:46:31 MSK; 3min 32s ago
+   Main PID: 25699 (gunicorn)
+      Tasks: 4 (limit: 1117)
+     Memory: 94.5M
+        CPU: 1.110s
+     CGroup: /system.slice/gunicorn.service
+             ├─25699 /home/django/3.2-crud/stocks_products/venv/bin/python3 /home/django/3.2-crud/stocks_products/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/3.2-crud/stocks_products/gunicorn.sock stocks_products.wsgi:application
+             ├─25700 /home/django/3.2-crud/stocks_products/venv/bin/python3 /home/django/3.2-crud/stocks_products/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/3.2-crud/stocks_products/gunicorn.sock stocks_products.wsgi:application
+             ├─25701 /home/django/3.2-crud/stocks_products/venv/bin/python3 /home/django/3.2-crud/stocks_products/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/3.2-crud/stocks_products/gunicorn.sock stocks_products.wsgi:application
+             └─25702 /home/django/3.2-crud/stocks_products/venv/bin/python3 /home/django/3.2-crud/stocks_products/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/django/3.2-crud/stocks_products/gunicorn.sock stocks_products.wsgi:application
+
+Oct 06 22:46:31 cv5331785.novalocal systemd[1]: Started gunicorn daemon for Django CRUD project.
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25699]: [2025-10-06 22:46:31 +0300] [25699] [INFO] Starting gunicorn 23.0.0
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25699]: [2025-10-06 22:46:31 +0300] [25699] [INFO] Listening at: unix:/home/django/3.2-crud/stocks_products/gunicorn.sock (25699)
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25699]: [2025-10-06 22:46:31 +0300] [25699] [INFO] Using worker: sync
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25700]: [2025-10-06 22:46:31 +0300] [25700] [INFO] Booting worker with pid: 25700
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25701]: [2025-10-06 22:46:31 +0300] [25701] [INFO] Booting worker with pid: 25701
+Oct 06 22:46:31 cv5331785.novalocal gunicorn[25702]: [2025-10-06 22:46:31 +0300] [25702] [INFO] Booting worker with pid: 25702
